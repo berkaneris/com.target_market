@@ -2,28 +2,21 @@ package utils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+
 
 public class PurchaseElementSelector {
-    private WebElement name;
-    private WebElement price;
-    private WebElement addToCArtButton;
 
-    public PurchaseElementSelector(WebElement box) {
-        name = box.findElement(By.cssSelector("h5.card-title"));
-        price = box.findElement(By.cssSelector("p.card-price i:nth-child(1)"));
-        addToCArtButton = box.findElement(By.cssSelector("button.btn.btn-danger"));
+    public static WebElement getName(WebElement box) {
+        return box.findElement(By.cssSelector("h5.card-title"));
     }
 
-    public WebElement getName() {
-        return name;
+    public static WebElement getPrice(WebElement box) {
+        return box.findElement(By.cssSelector("p.card-price i:nth-child(1)"));
     }
 
-    public WebElement getPrice() {
-        return price;
+    public static WebElement getAddToCArtButton(WebElement box) {
+        return box.findElement(By.cssSelector("button.btn.btn-danger"));
     }
 
-    public WebElement getAddToCArtButton() {
-        return addToCArtButton;
-    }
+
 }

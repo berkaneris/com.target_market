@@ -14,3 +14,4 @@ CHANGE LOG
 gönderip fiyat, isim ve addToCart butonu webElement şeklinde alabilirsiniz.
 
 -Bütün tablerin sayfaları oluşturuldu içerikleri ellerinizden öper :)
+
