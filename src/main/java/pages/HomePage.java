@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage {
+<<<<<<< HEAD
 
     // Locators
     @FindBy(linkText = "Weborder")
@@ -65,3 +66,12 @@ public class HomePage extends BasePage {
        DRIVER.navigate().refresh();
     }
 }
+=======
+    @FindBy(linkText = "Target Market")
+    private WebElement targetMarketLink;
+
+    public void clickOnTargetMarketLink() {
+        targetMarketLink.click();
+    }
+}
+>>>>>>> 36925e7a5aaa36aeee529155eb1b6cd7a825da20

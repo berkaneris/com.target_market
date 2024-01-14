@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="f729cf59-6ff5-4272-85ce-2fcd08c3a24e" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
@@ -30,11 +31,15 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/TargetMarketLoginPage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/Hooks.java" afterDir="false" />
     </list>
+=======
+    <list default="true" id="f729cf59-6ff5-4272-85ce-2fcd08c3a24e" name="Changes" comment="" />
+>>>>>>> 36925e7a5aaa36aeee529155eb1b6cd7a825da20
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -58,6 +63,16 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+=======
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2auZGb4KC7YUclzgnJlFpKPlvH3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> 36925e7a5aaa36aeee529155eb1b6cd7a825da20
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -66,6 +81,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
@@ -161,6 +177,11 @@
       </list>
     </recent_temporary>
   </component>
+=======
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+>>>>>>> 36925e7a5aaa36aeee529155eb1b6cd7a825da20
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
