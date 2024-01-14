@@ -4,12 +4,66 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="f729cf59-6ff5-4272-85ce-2fcd08c3a24e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/All_Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/Furniture_Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/Groceries_Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/HomeDecoration_Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/Laptops_Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage/TargetMarketLoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/Skincare_Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/Smartphone_Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/TargetMarketHomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/Tops_Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/WomensDresses_Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/WomensShoes_Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/PurchaseElementSelector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginPage_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/TargetMarketLoginPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/Hooks.java" afterDir="false" />
+    </list>
+=======
     <list default="true" id="f729cf59-6ff5-4272-85ce-2fcd08c3a24e" name="Changes" comment="" />
+>>>>>>> 36925e7a5aaa36aeee529155eb1b6cd7a825da20
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2auZGb4KC7YUclzgnJlFpKPlvH3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+=======
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -18,6 +72,7 @@
 }]]></component>
   <component name="ProjectId" id="2auZGb4KC7YUclzgnJlFpKPlvH3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> 36925e7a5aaa36aeee529155eb1b6cd7a825da20
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -26,9 +81,107 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/mfaco/workspace/com.target_market"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mfaco\workspace\com.target_market" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.LoginPage_Test">
+    <configuration name="LoginPage_Test" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="inar.web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.LoginPage_Test" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginPage_Test.testLoginWithProblemUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="inar.web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.LoginPage_Test" />
+      <option name="METHOD_NAME" value="testLoginWithProblemUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginPage_Test.testLoginWithStandardUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="inar.web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.LoginPage_Test" />
+      <option name="METHOD_NAME" value="testLoginWithStandardUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginPage_Test.testsele" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="inar.web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.LoginPage_Test" />
+      <option name="METHOD_NAME" value="testsele" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.LoginPage_Test" />
+        <item itemvalue="TestNG.LoginPage_Test.testLoginWithProblemUser" />
+        <item itemvalue="TestNG.LoginPage_Test.testLoginWithStandardUser" />
+        <item itemvalue="TestNG.LoginPage_Test.testsele" />
+      </list>
+    </recent_temporary>
+  </component>
+=======
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
+>>>>>>> 36925e7a5aaa36aeee529155eb1b6cd7a825da20
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
