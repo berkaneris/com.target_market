@@ -15,7 +15,6 @@
         <selenium.version>4.16.1</selenium.version>
         <browser>chrome</browser>
     </properties>
-
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
@@ -24,20 +23,17 @@
             <version>7.9.0</version>
             <scope>test</scope>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.16.1</version>
+            <version>${selenium.version}</version>
         </dependency>
-
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>5.1.1</version>
         </dependency>
-
     </dependencies>
     <build>
         <plugins>
@@ -56,9 +52,23 @@
                 <version>3.2.3</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <!--                        <suiteXmlFile>testng.xml</suiteXmlFile>-->
+                        <suiteXmlFile>src/test/resources/LoginTests.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>io.spring.javaformat</groupId>
+                <artifactId>spring-javaformat-maven-plugin</artifactId>
+                <version>0.0.38</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <inherited>true</inherited>
+                        <goals>
+                            <goal>validate</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

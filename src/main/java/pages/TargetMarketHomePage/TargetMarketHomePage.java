@@ -1,11 +1,14 @@
 package pages.TargetMarketHomePage;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import pages.BasePage.BasePage;
-import pages.ShoppingCartPage.ShoppingCart_Page;
+import pages.ShoppingCartPage.ShoppingCartPage;
+import pages.TargetMarketLoginPage.LoginPage;
 import utils.PurchaseElementSelector;
 
 import java.util.ArrayList;
@@ -14,45 +17,49 @@ import java.util.List;
 public class TargetMarketHomePage extends BasePage {
 
     @FindBy(css = "a[data-rr-ui-event-key='1']")
-    protected WebElement allTab;
+    private WebElement allTab;
     @FindBy(css = "a[data-rr-ui-event-key='2']")
-    protected WebElement smartphonesTab;
+    private WebElement smartphonesTab;
     @FindBy(css = "a[data-rr-ui-event-key='3']")
-    protected WebElement laptopsTab;
+    private WebElement laptopsTab;
     @FindBy(css = "a[data-rr-ui-event-key='4']")
-    protected WebElement skincareTab;
+    private WebElement skincareTab;
     @FindBy(css = "a[data-rr-ui-event-key='5']")
-    protected WebElement groceriesTab;
+    private WebElement groceriesTab;
     @FindBy(css = "a[data-rr-ui-event-key='6']")
-    protected WebElement homeDecorationTab;
+    private WebElement homeDecorationTab;
     @FindBy(css = "a[data-rr-ui-event-key='7']")
-    protected WebElement furnitureTab;
+    private WebElement furnitureTab;
     @FindBy(css = "a[data-rr-ui-event-key='8']")
-    protected WebElement topsTab;
+    private WebElement topsTab;
     @FindBy(css = "a[data-rr-ui-event-key='9']")
-    protected WebElement womensDressesTab;
+    private WebElement womensDressesTab;
     @FindBy(css = "a[data-rr-ui-event-key='10']")
-    protected WebElement womensShoesTab;
+    private WebElement womensShoesTab;
 
     @FindBy(css = "h5.display-5")
-    protected WebElement welcomeText;
+    private WebElement welcomeText;
 
     @FindBy(xpath = "//button[text()='Logout']")
-    protected WebElement logoutButton;
+    private WebElement logoutButton;
 
     @FindBy(css = "button.mx-3:nth-child(2)")
-    protected WebElement shoppingButton;
+    private WebElement shoppingButton;
 
     @FindBy(id = "sortType")
-    protected WebElement sortDropDown;
+    private WebElement sortDropDown;
 
     @FindBy(css = "div.card-body")
-    protected List<WebElement> itemsList;
+    private List<WebElement> itemsList;
 
-    public String getWelcomeText() {
-        wait.until(ExpectedConditions.visibilityOf(welcomeText));
-        return welcomeText.getText();
-    }
+    @FindBy(className= ".display-1")
+    private WebElement tabNameHeader;
+    @FindBy(xpath = "//p[contains(text() , 'received')]")
+    private WebElement orderReceivedMessage;
+
+    @FindBy(css = "#target-market .text-center")
+    private WebElement orderConfirmationBox;
+
     public void clickOnAllTab(){
        allTab.click();
     }
@@ -87,8 +94,21 @@ public class TargetMarketHomePage extends BasePage {
     public void clickOnWomenShoesTab(){
         womensShoesTab.click();
     }
-    public void clickOnLogoutButton(){
+    public LoginPage clickOnLogoutButton(){
         logoutButton.click();
+        return new LoginPage();
+    }
+
+    public String getWelcomeText() {
+        wait.until(ExpectedConditions.visibilityOf(welcomeText));
+        return welcomeText.getText();
+    }
+    public boolean isWelcomeMessageDisplayed(){
+        try {
+            return welcomeText.isDisplayed();
+        }catch (NoSuchElementException ex){
+            return false;
+        }
     }
 
     public WebElement getItem(String itemName){
@@ -105,17 +125,51 @@ public class TargetMarketHomePage extends BasePage {
     public String getAddedItemQuantity(){
        return shoppingButton.findElement(By.cssSelector("span")).getText();
     }
-    public ShoppingCart_Page clickOnShoppingButton(){
+    public ShoppingCartPage clickOnShoppingButton(){
         shoppingButton.click();
-        return new ShoppingCart_Page();
+        return new ShoppingCartPage();
     }
 
     public List<String> getItemNameList(){
         List<String> itemNameList = new ArrayList<>();
         for(int i = 0;  i < itemsList.size(); i++){
-            itemNameList.add(PurchaseElementSelector.getName(itemsList.get(i)).getText());
+            itemNameList.add(PurchaseElementSelector.getName(itemsList.get(i)).getText().toLowerCase());
         }
         return itemNameList;
     }
+
+    public void sortBy(String sortSelectionText){
+        Select select = new Select(sortDropDown);
+        select.selectByVisibleText(sortSelectionText);
+    }
+
+    public List<Integer> getPriceList(){
+        List<Integer> priceList = new ArrayList<>();
+        for(int i = 0;  i < itemsList.size(); i++){
+            String price =  PurchaseElementSelector.getPrice(itemsList.get(i)).getText().substring(1);
+            priceList.add(Integer.parseInt(price));
+        }
+        return priceList;
+    }
+
+    public boolean isAddedToCartButtonDisplayed(String itemName){
+       return PurchaseElementSelector.getAddToCArtButton(getItem(itemName)).getText().equals("Added to Cart");
+    }
+
+    public String getTabNameHeader(){
+        return tabNameHeader.getText();
+    }
+
+    public boolean isOrderReceivedMessageDisplayed(){
+        return orderReceivedMessage.isDisplayed();
+    }
+
+    public boolean isOrderConfirmationBoxDisplayed(){
+        return orderConfirmationBox.isDisplayed();
+    }
+
+
+
+
 }
 

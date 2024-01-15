@@ -1,14 +1,15 @@
 package pages.ShoppingCartPage;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage.BasePage;
-import pages.CheckOutPage.CheckOut_Page;
+import pages.CheckOutPage.CheckOutPage;
 
 import java.util.List;
 
-public class ShoppingCart_Page extends BasePage {
+public class ShoppingCartPage extends BasePage {
 
     @FindBy(xpath = "//button[text()='Go to Checkout']")
     private WebElement checkoutButton;
@@ -25,13 +26,19 @@ public class ShoppingCart_Page extends BasePage {
     @FindBy(css = ".text-start p")
     private WebElement totalPrice;
 
-    public WebElement getItemOnCart(String itemName){
+    @FindBy(xpath = "//p[contains(text(), 'empty')]")
+    private WebElement emptyText;
+
+    private WebElement getItemOnCart(String itemName){
         for(int i = 0; i < selectedItems.size(); i++){
             if(selectedItems.get(i).findElement(By.cssSelector("h3")).getText().equalsIgnoreCase(itemName)){
                 return selectedItems.get(i);
             }
         }
         return null;
+    }
+    public boolean isItemOnCart(String itemName){
+        return !getItemOnCart(itemName).equals(null);
     }
 
     public void clickPlusButtonForItem(String itemName){
@@ -42,14 +49,18 @@ public class ShoppingCart_Page extends BasePage {
     }
 
     public String getTotalPrice(){
-        return totalPrice.getText();
+        return totalPrice.getText().substring(13);
     }
 
-    public CheckOut_Page clickOnCheckoutButton(){
-        checkoutButton.click();
-        return new CheckOut_Page();
+    public CheckOutPage clickOnCheckoutButton(){
+        try {
+            checkoutButton.click();
+            return new CheckOutPage();
+        }catch (NoSuchElementException ex){
+            return null;
+        }
     }
-
-
-
+    public boolean isEmptyTextDisplayed(){
+        return emptyText.isDisplayed();
+    }
 }
