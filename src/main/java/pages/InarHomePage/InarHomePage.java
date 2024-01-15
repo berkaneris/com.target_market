@@ -11,8 +11,6 @@ public class InarHomePage extends BasePage {
     // Locators
     @FindBy(linkText = "Target Market")
     private WebElement targetMarketLink;
-
-
     @FindBy(css = "h1.display-1.text-fifth")
     private WebElement exploreInarTestingWorldTitletext;
 

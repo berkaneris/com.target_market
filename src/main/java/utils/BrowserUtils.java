@@ -1,7 +1,12 @@
 package utils;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.interactions.Actions;
+
+import java.io.File;
+import java.nio.file.Files;
 
 public class BrowserUtils {
 
@@ -34,6 +39,26 @@ public class BrowserUtils {
 
     public static String getTitle(){
         return DriverManager.getDriver().getTitle();
+    }
+
+    public static void takeScreenShot(String fileName){
+        try {
+            // Convert WebDriver object to TakesScreenshot
+            TakesScreenshot ts = (TakesScreenshot) DriverManager.getDriver();
+
+            // Capture screenshot as a File
+            File screenshot = ts.getScreenshotAs(OutputType.FILE);
+
+            // Specify the destination of the screenshot
+            File destination = new File(fileName);
+
+            // Copy the screenshot file to the specified destination
+            Files.copy(screenshot.toPath(), destination.toPath());
+
+            System.out.println("Screenshot taken: " + destination.getAbsolutePath());
+        } catch (Exception e) {
+            System.err.println("Exception while taking screenshot: " + e.getMessage());
+        }
     }
 
 

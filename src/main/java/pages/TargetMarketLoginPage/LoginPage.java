@@ -1,5 +1,6 @@
 package pages.TargetMarketLoginPage;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage.BasePage;
@@ -18,11 +19,14 @@ public class LoginPage extends BasePage {
     @FindBy(css = "#login-button")
     private WebElement loginButton;
 
-    @FindBy(css = "#username-error-alert")
-    private WebElement lockedOutUserError;
+    @FindBy(id = "username-error-alert")
+    private WebElement userNameErrorAlert;
+
+    @FindBy(id = "password-error-alert")
+    private WebElement passWordErrorAlert;
 
     public WebElement getLockedOutUserError() {
-        return lockedOutUserError;
+        return userNameErrorAlert;
     }
 
     public TargetMarketHomePage loginWithStandardUser() {
@@ -52,5 +56,35 @@ public class LoginPage extends BasePage {
         loginButton.click();
         return new TargetMarketHomePage();
     }
+
+    public TargetMarketHomePage loginWithAnyUser(String username, String password){
+        loginNameInput.sendKeys(username);
+        loginPasswordInput.sendKeys(password);
+        loginButton.click();
+        if(isLoginSuccessful()){
+            return new TargetMarketHomePage();
+        }
+        return null;
+    }
+
+    public boolean isLoginSuccessful(){
+        try {
+            TargetMarketHomePage targetMarketHomePage = new TargetMarketHomePage();
+            if (targetMarketHomePage.isWelcomeMessageDisplayed()) {
+                return true;
+            }
+        }catch (NoSuchElementException ex){
+
+        }
+        return false;
+    }
+    public boolean isUserNameErrorAlertDisplayed(){
+        return userNameErrorAlert.isDisplayed();
+    }
+    public boolean isPasswordErrorAlertDisplayed(){
+        return passWordErrorAlert.isDisplayed();
+    }
+
+
 
 }

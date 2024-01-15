@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f729cf59-6ff5-4272-85ce-2fcd08c3a24e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/TargetMarketLoginPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/Hooks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CheckOutPage/CheckOut_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CheckOutPage/CheckOutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/InarHomePage/InarHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/InarHomePage/InarHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ShoppingCartPage/ShoppingCart_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ShoppingCartPage/ShoppingCartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/TargetMarketHomePage/TargetMarketHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/TargetMarketHomePage/TargetMarketHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/TargetMarketLoginPage/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/TargetMarketLoginPage/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/BrowserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/BrowserUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AllTabTests/AllTabTest_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/TargetMarketHomePageTests/ShoppingCartTest/AllTabTests/AllTabTest_01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/Hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/BaseTests/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/TargetMarketLoginPageTests/LoginPage_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/TargetMarketLoginPageTests/LoginPageTest_01.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,24 +50,56 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.AllTabTest_01.testAllTabsLink.executor": "Run",
+    "TestNG.AllTabsSortTest_01.testAllTabsSortByAToZ.executor": "Run",
+    "TestNG.C:/Users/asus/workspace2/com.target_market/src/test/resources/testng.xml.executor": "Run",
+    "TestNG.C:/Users/asus/workspace2/com.target_market/testng.xml.executor": "Run",
+    "TestNG.CheckOutTest_01.testSuccessfulCheckoutProcess.executor": "Run",
+    "TestNG.CheckOutTest_02.testFailedCheckoutProcess.executor": "Run",
+    "TestNG.ECommerceUserFlowTest.executor": "Run",
+    "TestNG.EmptyShoppingCartTest.testEmptyShoppingCart (1).executor": "Run",
+    "TestNG.EmptyShoppingCartTest.testEmptyShoppingCart.executor": "Run",
+    "TestNG.LoginPageTest_01.testLoginWithStandardUser.executor": "Run",
+    "TestNG.LoginPageTest_02.testLoginProcessWithInvalidUser.executor": "Run",
+    "TestNG.LoginPageTest_03.testLoginWithLockedOutUser.executor": "Run",
+    "TestNG.LoginPageTest_06.executor": "Run",
+    "TestNG.LoginPage_02_Test.testLoginProcessWithInvalidUser.executor": "Run",
     "TestNG.LoginPage_Test.executor": "Run",
+    "TestNG.ShoppingCartTest_02.testSelectedItemsOnShoppingCart.executor": "Run",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/asus/workspace2/com.target_market"
+    "last_opened_file_path": "C:/Users/asus/workspace2/TestNGLesson/TestNGLesson",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.AllTabTest_01.testAllTabsLink">
-    <configuration name="AllTabTest_01.testAllTabsLink" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\workspace2\com.target_market\src\test\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.C:/Users/asus/workspace2/com.target_market/src/test/resources/testng.xml">
+    <configuration name="C:/Users/asus/workspace2/com.target_market/src/test/resources/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="inar.target_market" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckOutTest_02.testFailedCheckoutProcess" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="inar.target_market" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Tests.AllTabTests.*" />
+          <option name="PATTERN" value="Tests.CheckOutPageTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Tests.AllTabTests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.AllTabTests.AllTabTest_01" />
-      <option name="METHOD_NAME" value="testAllTabsLink" />
+      <option name="PACKAGE_NAME" value="Tests.CheckOutPageTests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.CheckOutPageTests.CheckOutTest_02" />
+      <option name="METHOD_NAME" value="testFailedCheckoutProcess" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -68,7 +107,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginPage_Test" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ECommerceUserFlowTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="inar.target_market" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.UserTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests.UserTests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.UserTests.ECommerceUserFlowTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginPageTest_03.testLoginWithLockedOutUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="inar.target_market" />
       <extension name="coverage">
         <pattern>
@@ -77,7 +133,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests.TargetMarketLoginPageTests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.TargetMarketLoginPageTests.LoginPage_Test" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TargetMarketLoginPageTests.LoginPageTest_03" />
+      <option name="METHOD_NAME" value="testLoginWithLockedOutUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginPageTest_06" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="inar.target_market" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.TargetMarketLoginPageTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests.TargetMarketLoginPageTests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TargetMarketLoginPageTests.LoginPageTest_06" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -87,8 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AllTabTest_01.testAllTabsLink" />
-        <item itemvalue="TestNG.LoginPage_Test" />
+        <item itemvalue="TestNG.C:/Users/asus/workspace2/com.target_market/src/test/resources/testng.xml" />
+        <item itemvalue="TestNG.LoginPageTest_06" />
+        <item itemvalue="TestNG.LoginPageTest_03.testLoginWithLockedOutUser" />
+        <item itemvalue="TestNG.CheckOutTest_02.testFailedCheckoutProcess" />
+        <item itemvalue="TestNG.ECommerceUserFlowTest" />
       </list>
     </recent_temporary>
   </component>
