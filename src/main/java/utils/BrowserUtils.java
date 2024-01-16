@@ -1,8 +1,6 @@
 package utils;
 
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 
 import java.io.File;
@@ -61,6 +59,15 @@ public class BrowserUtils {
         }
     }
 
+    public static WebElement getName(WebElement box) {
+        return box.findElement(By.cssSelector("h5.card-title"));
+    }
 
+    public static WebElement getPrice(WebElement box) {
+        return box.findElement(By.cssSelector("p.card-price i:nth-child(1)"));
+    }
 
+    public static WebElement getAddToCArtButton(WebElement box) {
+        return box.findElement(By.cssSelector("button.btn.btn-danger"));
+    }
 }
