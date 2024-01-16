@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Data Provider">
+
+    <test name="Simple test">
+        <classes>
+            <class name="tests.standartUserTests.checkOutPageTests.CheckOutTest_04"/>
+            <class name="tests.standartUserTests.shoppingCartPageTests.ShoppingCartTest_04"/>
+            <class name="tests.targetMarketLoginPageTests.LoginPageTest_06"/>
+        </classes>
+    </test>
+</suite>
