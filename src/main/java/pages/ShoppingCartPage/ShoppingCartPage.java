@@ -52,6 +52,7 @@ public class ShoppingCartPage extends BasePage {
         return totalPrice.getText().substring(13);
     }
 
+
     public CheckOutPage clickOnCheckoutButton(){
         try {
             checkoutButton.click();
@@ -62,5 +63,9 @@ public class ShoppingCartPage extends BasePage {
     }
     public boolean isEmptyTextDisplayed(){
         return emptyText.isDisplayed();
+    }
+    public String getItemQuantityOnCart(String itemName){
+        String itemQuantity = getItemOnCart(itemName).findElement(By.cssSelector("div > div > div > span")).getText();
+        return itemQuantity;
     }
 }

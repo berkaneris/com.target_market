@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import pages.BasePage.BasePage;
 import pages.ShoppingCartPage.ShoppingCartPage;
 import pages.TargetMarketLoginPage.LoginPage;
+import utils.BrowserUtils;
 import utils.PurchaseElementSelector;
 
 import java.util.ArrayList;
@@ -59,6 +60,9 @@ public class TargetMarketHomePage extends BasePage {
 
     @FindBy(css = "#target-market .text-center")
     private WebElement orderConfirmationBox;
+
+    @FindBy(css = ".text-center.bg-light.p-5.rounded-3.position-relative")
+    private List<WebElement> messageAppearAfterPurchaseProcess;
 
     public void clickOnAllTab(){
        allTab.click();
@@ -169,7 +173,17 @@ public class TargetMarketHomePage extends BasePage {
     }
 
 
+    public String getItemPrice(String itemName) {
+        return PurchaseElementSelector.getPrice(getItem(itemName)).getText();
+    }
 
+    public String messageAfterOrderProcessCompleted() {
+        String contex = "";
+        for (WebElement appearAfterPurchaseProcess : messageAppearAfterPurchaseProcess) {
+            contex += (appearAfterPurchaseProcess.getText());
+        }
+        return contex;
+    }
 
 }
 
