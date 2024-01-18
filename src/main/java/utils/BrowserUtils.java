@@ -8,66 +8,75 @@ import java.nio.file.Files;
 
 public class BrowserUtils {
 
-    private static Actions actions = new Actions(DriverManager.getDriver());
-    public static void scrollDownWithPageDown(){
-        actions.keyDown(Keys.PAGE_DOWN).release().build().perform();
-        wait(1);
-    }
+	private static Actions actions = new Actions(DriverManager.getDriver());
+	public static void scrollDownWithPageDown() {
+		actions.keyDown(Keys.PAGE_DOWN).release().build().perform();
+		wait(1);
+	}
+	public static void scrollUpWithPageUp() {
+		actions.keyDown(Keys.PAGE_UP).release().build().perform();
+		wait(1);
+	}
+	public static void wait(double timeout) {
+		try {
+			Thread.sleep((long) timeout * 1000);
+		}
+		catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	public static void wait(int timeout) {
+		try {
+			Thread.sleep(timeout * 1000);
+		}
+		catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	public static String getTitle() {
+		return DriverManager.getDriver().getTitle();
+	}
+	public static void takeScreenShot(String fileName) {
+		try {
+			// Convert WebDriver object to TakesScreenshot
+			TakesScreenshot ts = (TakesScreenshot) DriverManager.getDriver();
 
-    public static void scrollUpWithPageUp(){
-        actions.keyDown(Keys.PAGE_UP).release().build().perform();
-        wait(1);
-    }
+			// Capture screenshot as a File
+			File screenshot = ts.getScreenshotAs(OutputType.FILE);
 
-    public static void wait(double timeout){
-        try{
-            Thread.sleep((long)timeout * 1000);
-        }catch (InterruptedException e){
-            e.printStackTrace();
-        }
-    }
+			// Specify the destination of the screenshot
+			File destination = new File(fileName);
 
-    public static void wait(int timeout){
-        try{
-            Thread.sleep(timeout * 1000);
-        }catch (InterruptedException e){
-            e.printStackTrace();
-        }
-    }
+			// Copy the screenshot file to the specified destination
+			Files.copy(screenshot.toPath(), destination.toPath());
 
-    public static String getTitle(){
-        return DriverManager.getDriver().getTitle();
-    }
+			System.out.println("Screenshot taken: " + destination.getAbsolutePath());
+		}
+		catch (Exception e) {
+			System.err.println("Exception while taking screenshot: " + e.getMessage());
+		}
+	}
+	public static WebElement getName(WebElement box) {
+		return box.findElement(By.cssSelector("h5.card-title"));
+	}
+	public static WebElement getPrice(WebElement box) {
+		return box.findElement(By.cssSelector("p.card-price i:nth-child(1)"));
+	}
+	public static WebElement getAddToCArtButton(WebElement box) {
+		return box.findElement(By.cssSelector("button.btn.btn-danger"));
+	}
+	public static void scrollDownWithJavaScript(int i, int i1) {
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) DriverManager.getDriver();
 
-    public static void takeScreenShot(String fileName){
-        try {
-            // Convert WebDriver object to TakesScreenshot
-            TakesScreenshot ts = (TakesScreenshot) DriverManager.getDriver();
-
-            // Capture screenshot as a File
-            File screenshot = ts.getScreenshotAs(OutputType.FILE);
-
-            // Specify the destination of the screenshot
-            File destination = new File(fileName);
-
-            // Copy the screenshot file to the specified destination
-            Files.copy(screenshot.toPath(), destination.toPath());
-
-            System.out.println("Screenshot taken: " + destination.getAbsolutePath());
-        } catch (Exception e) {
-            System.err.println("Exception while taking screenshot: " + e.getMessage());
-        }
-    }
-
-    public static WebElement getName(WebElement box) {
-        return box.findElement(By.cssSelector("h5.card-title"));
-    }
-
-    public static WebElement getPrice(WebElement box) {
-        return box.findElement(By.cssSelector("p.card-price i:nth-child(1)"));
-    }
-
-    public static WebElement getAddToCArtButton(WebElement box) {
-        return box.findElement(By.cssSelector("button.btn.btn-danger"));
-    }
+		// Use JavaScript to scroll down the entire page
+		jsExecutor.executeScript("window.scrollBy(" + i + ", " + i1 +");");
+	}
+	public static void scrollTabsLine(int pixel){
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) DriverManager.getDriver();
+		jsExecutor.executeScript("document.querySelector('#splide02-list').setAttribute('style', 'transform: translateX(" + pixel + "px)');");
+	}
+	public static void clickOnWebElement(WebElement element){
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) DriverManager.getDriver();
+		jsExecutor.executeScript("arguments[0].click();", element);
+	}
 }

@@ -12,28 +12,29 @@ import pages.targetMarket.TargetMarketHomePage;
 import pages.targetMarket.LoginPage;
 import utils.DriverManager;
 
-
-
 public class Hooks {
 
-    protected InarHomePage homePage;
-    protected LoginPage loginPage;
-    protected CheckOutPage checkOutPage;
-    protected ShoppingCartPage shoppingCartPage;
-    protected TargetMarketHomePage targetMarketHomePage;
-    protected SoftAssert softAssert = new SoftAssert();
+	protected InarHomePage homePage;
 
-    @Parameters("browser")
-    @BeforeMethod
-    public static void SetUpTestEnvironment(@Optional("defaultBrowser")String browserType) {
-        DriverManager.getDriver(browserType);
-    }
+	protected LoginPage loginPage;
 
+	protected CheckOutPage checkOutPage;
 
+	protected ShoppingCartPage shoppingCartPage;
 
-    @AfterMethod
-    public static void tearDownTestEnvironment() {
-        DriverManager.closeDriver();
-    }
+	protected TargetMarketHomePage targetMarketHomePage;
+
+	protected SoftAssert softAssert = new SoftAssert();
+
+	@Parameters("browser")
+	@BeforeMethod
+	public static void SetUpTestEnvironment(@Optional("defaultBrowser") String browserType) {
+		DriverManager.getDriver(browserType);
+	}
+
+	@AfterMethod
+	public static void tearDownTestEnvironment() {
+		DriverManager.closeDriver();
+	}
 
 }

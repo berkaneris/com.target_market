@@ -1,6 +1,7 @@
 package tests.priorityBasedTests;
 
 import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
 import pages.targetMarket.CheckOutPage;
 import pages.targetMarket.InarHomePage;
 import pages.targetMarket.ShoppingCartPage;
@@ -10,22 +11,26 @@ import utils.DriverManager;
 
 public class Hooks2 {
 
-    protected InarHomePage homePage;
-    protected LoginPage loginPage;
-    protected CheckOutPage checkOutPage;
-    protected ShoppingCartPage shoppingCartPage;
-    protected TargetMarketHomePage targetMarketHomePage;
+	protected InarHomePage homePage;
 
-    @Parameters("browser")
-    @BeforeClass
-    public static void SetUpTestEnvironment(@Optional("defaultBrowser")String browserType) {
-        DriverManager.getDriver(browserType);
-    }
+	protected LoginPage loginPage;
 
+	protected CheckOutPage checkOutPage;
 
+	protected ShoppingCartPage shoppingCartPage;
 
-    @AfterClass
-    public static void tearDownTestEnvironment() {
-        DriverManager.closeDriver();
-    }
+	protected TargetMarketHomePage targetMarketHomePage;
+	protected SoftAssert softAssert = new SoftAssert();
+
+	@Parameters("browser")
+	@BeforeClass
+	public static void SetUpTestEnvironment(@Optional("defaultBrowser") String browserType) {
+		DriverManager.getDriver(browserType);
+	}
+
+	@AfterClass
+	public static void tearDownTestEnvironment() {
+		DriverManager.closeDriver();
+	}
+
 }

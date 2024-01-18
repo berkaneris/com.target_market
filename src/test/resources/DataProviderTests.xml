@@ -2,6 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Data Provider">
 
+    <listeners>
+        <listener class-name="tests.listeners.ExtentReportListener"/>
+    </listeners>
+
     <test name="Simple test">
         <classes>
             <class name="tests.standartUserTests.checkOutPageTests.CheckOutTest_04"/>

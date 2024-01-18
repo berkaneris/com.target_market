@@ -34,4 +34,3 @@ public class ShoppingCartTest_05 extends Hooks {
 	}
 
 }
-
