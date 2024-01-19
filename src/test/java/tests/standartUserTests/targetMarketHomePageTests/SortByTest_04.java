@@ -25,7 +25,7 @@ public class SortByTest_04 extends Hooks {
 		targetMarketHomePage.sortBy("Highest Price");
 		List<Integer> pricesOfProducts2 = targetMarketHomePage.getPriceList();
 		Collections.reverse(pricesOfProducts);
-		Assert.assertEquals(pricesOfProducts, pricesOfProducts2);
+		Assert.assertEquals(pricesOfProducts, pricesOfProducts2 , "Wrong sorting!");
 	}
 
 }

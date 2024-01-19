@@ -5,39 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f729cf59-6ff5-4272-85ce-2fcd08c3a24e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/priorityBasedTests/StandardUserFromLoginToLogoutTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/targetMarket/CheckOutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/targetMarket/CheckOutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/targetMarket/InarHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/targetMarket/InarHomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/targetMarket/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/targetMarket/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/targetMarket/ShoppingCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/targetMarket/ShoppingCartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/targetMarket/TargetMarketHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/targetMarket/TargetMarketHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/BrowserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/BrowserUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DriverManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/priorityBasedTests/ECommerceUserFlowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/priorityBasedTests/ECommerceUserFlowTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/priorityBasedTests/Hooks2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/priorityBasedTests/Hooks2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/priorityBasedTests/StandartUserFromLoginToLogoutTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/checkOutPageTests/CheckOutTest_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/checkOutPageTests/CheckOutTest_01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/checkOutPageTests/CheckOutTest_02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/checkOutPageTests/CheckOutTest_02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/checkOutPageTests/CheckOutTest_03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/checkOutPageTests/CheckOutTest_03.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/checkOutPageTests/CheckOutTest_04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/checkOutPageTests/CheckOutTest_04.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/shoppingCartPageTests/ShoppingCartTest_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/shoppingCartPageTests/ShoppingCartTest_01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/shoppingCartPageTests/ShoppingCartTest_02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/shoppingCartPageTests/ShoppingCartTest_02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/shoppingCartPageTests/ShoppingCartTest_03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/shoppingCartPageTests/ShoppingCartTest_03.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/shoppingCartPageTests/ShoppingCartTest_04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/shoppingCartPageTests/ShoppingCartTest_04.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/listeners/ExtentReportListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/priorityBasedTests/ECommerceUserFlowTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/priorityBasedTests/Hooks2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/priorityBasedTests/SelectedItemInformationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/priorityBasedTests/StandardUserFromLoginToLogoutTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/shoppingCartPageTests/ShoppingCartTest_05.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/shoppingCartPageTests/ShoppingCartTest_05.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/AllTabTest_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/AllTabTest_01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/AllTabTest_02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/AllTabTest_02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/targetMarketLoginPageTests/LoginPageTest_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/targetMarketLoginPageTests/LoginPageTest_01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/targetMarketLoginPageTests/LoginPageTest_02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/targetMarketLoginPageTests/LoginPageTest_02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/targetMarketLoginPageTests/LoginPageTest_03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/targetMarketLoginPageTests/LoginPageTest_03.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/targetMarketLoginPageTests/LoginPageTest_04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/targetMarketLoginPageTests/LoginPageTest_04.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/targetMarketLoginPageTests/LoginPageTest_05.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/targetMarketLoginPageTests/LoginPageTest_05.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/targetMarketLoginPageTests/LoginPageTest_06.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/targetMarketLoginPageTests/LoginPageTest_06.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/DataProviderTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/DataProviderTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/SortByTest_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/SortByTest_01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/SortByTest_03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/SortByTest_03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/SortByTest_04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/SortByTest_04.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/DataProviderTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/LoginTests.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +58,7 @@
     "TestNG.AllTabTest_01.executor": "Run",
     "TestNG.AllTabTest_01.testAllTabsLink.executor": "Run",
     "TestNG.AllTabsSortTest_01.testAllTabsSortByAToZ.executor": "Run",
+    "TestNG.C:/Users/asus/OneDrive/Masaüstü/New folder/com.target_market/src/test/resources/DataProviderTests.xml.executor": "Run",
     "TestNG.C:/Users/asus/workspace2/com.target_market/src/main/resources/dataProvider.xml.executor": "Run",
     "TestNG.C:/Users/asus/workspace2/com.target_market/src/test/resources/DataProviderTests.xml.executor": "Run",
     "TestNG.C:/Users/asus/workspace2/com.target_market/src/test/resources/LoginTests.xml.executor": "Run",
@@ -118,7 +100,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/asus/workspace2/com.web-automation",
+    "last_opened_file_path": "C:/Users/asus/OneDrive/Masaüstü/New folder/com.target_market/src/test/java/tests/priorityBasedTests",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -129,6 +111,10 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\OneDrive\Masaüstü\New folder\com.target_market\src\test\java\tests\priorityBasedTests" />
+      <recent name="C:\Users\asus\OneDrive\Masaüstü\New folder\com.target_market\src\test\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\asus\workspace2\com.target_market\src\test\resources" />
     </key>
@@ -136,7 +122,17 @@
       <recent name="tests.listeners" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CheckOutTest_06">
+  <component name="RunManager" selected="TestNG.C:/Users/asus/OneDrive/Masaüstü/New folder/com.target_market/src/test/resources/DataProviderTests.xml">
+    <configuration name="C:/Users/asus/OneDrive/Masaüstü/New folder/com.target_market/src/test/resources/DataProviderTests.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="com.target_market" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/DataProviderTests.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CheckOutTest_06" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="com.target_market" />
       <extension name="coverage">
@@ -147,23 +143,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests.standartUserTests.checkOutPageTests" />
       <option name="MAIN_CLASS_NAME" value="tests.standartUserTests.checkOutPageTests.CheckOutTest_06" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LogoutTest_01" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="com.target_market" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.standartUserTests.targetMarketHomePageTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.standartUserTests.targetMarketHomePageTests" />
-      <option name="MAIN_CLASS_NAME" value="tests.standartUserTests.targetMarketHomePageTests.LogoutTest_01" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -224,11 +203,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/asus/OneDrive/Masaüstü/New folder/com.target_market/src/test/resources/DataProviderTests.xml" />
         <item itemvalue="TestNG.CheckOutTest_06" />
         <item itemvalue="TestNG.TabHeaderTest_01" />
         <item itemvalue="TestNG.checkenabled" />
         <item itemvalue="TestNG.LogoutTest_02" />
-        <item itemvalue="TestNG.LogoutTest_01" />
       </list>
     </recent_temporary>
   </component>
@@ -260,6 +239,7 @@
       <workItem from="1705431600941" duration="497000" />
       <workItem from="1705476759698" duration="34445000" />
       <workItem from="1705561316658" duration="18320000" />
+      <workItem from="1705681873645" duration="1173000" />
     </task>
     <servers />
   </component>

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class StandardUserFromLoginToLogoutTest extends Hooks2 {
+public class UserFlowTest_03 extends HooksPriority {
 
 	@Test(priority = 1)
 	public void loginTest() {
@@ -18,6 +18,7 @@ public class StandardUserFromLoginToLogoutTest extends Hooks2 {
 		targetMarketHomePage = loginPage.loginWithStandardUser();
 		Assert.assertTrue(loginPage.isLoginSuccessful(), "User should be successfully logged in.");
 	}
+
 	@Test(priority = 2, dependsOnMethods = "loginTest")
 	public void selectItemTest() {
 		targetMarketHomePage.clickOnSkincareTab();
@@ -35,12 +36,15 @@ public class StandardUserFromLoginToLogoutTest extends Hooks2 {
 		shoppingCartPage = targetMarketHomePage.clickOnShoppingButton();
 		shoppingCartPage.clickPlusButtonForItem("Samsung Galaxy Book");
 		List<List<String>> itemsInformationOnCart = shoppingCartPage.getItemsNamesAndValuesOnCart();
-		Assert.assertEquals(itemsInformationOnCart, expectedItemsInformation , "The information for selected items should be same with the items information on shopping cart");
+		Assert.assertEquals(itemsInformationOnCart, expectedItemsInformation,
+				"The information for selected items should be same with the items information on shopping cart");
 	}
+
 	@Test(priority = 3, dependsOnMethods = "selectItemTest")
 	public void logoutTest() {
 		targetMarketHomePage = shoppingCartPage.clickOnCloseButton();
 		loginPage = targetMarketHomePage.clickOnLogoutButton();
 		Assert.assertTrue(loginPage.isLoginPageTextDisplayed(), "The user should be on login page");
 	}
+
 }

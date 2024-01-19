@@ -30,7 +30,6 @@ public class ShoppingCartTest_05 extends Hooks {
 		boolean isCartEmptyAfterPurchaseProcess = true;
 		boolean isShoppingCartEmpty = shoppingCartPage.isEmptyTextDisplayed();
 		Assert.assertEquals(isShoppingCartEmpty, isCartEmptyAfterPurchaseProcess);
-
 	}
 
 }

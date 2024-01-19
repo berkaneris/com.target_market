@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="User Tests On Chrome">
+        <parameter name ="browser" value ="chrome"/>
+        <classes>
+            <class name="tests.priorityBasedTests.UserFlowTest_01"/>
+            <class name="tests.priorityBasedTests.UserFlowTest_02"/>
+            <class name="tests.priorityBasedTests.UserFlowTest_03"/>
+        </classes>
+    </test>
+    <test name="User Tests On Edge">
+        <parameter name ="browser" value ="edge"/>
+        <classes>
+            <class name="tests.priorityBasedTests.UserFlowTest_01"/>
+            <class name="tests.priorityBasedTests.UserFlowTest_02"/>
+            <class name="tests.priorityBasedTests.UserFlowTest_03"/>
+        </classes>
+    </test>
+    <test name="User Tests On Firefox">
+        <parameter name ="browser" value ="firefox"/>
+        <classes>
+            <class name="tests.priorityBasedTests.UserFlowTest_01"/>
+            <class name="tests.priorityBasedTests.UserFlowTest_02"/>
+            <class name="tests.priorityBasedTests.UserFlowTest_03"/>
+        </classes>
+    </test>
+</suite>

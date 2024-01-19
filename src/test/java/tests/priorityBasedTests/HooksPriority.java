@@ -1,15 +1,14 @@
 package tests.priorityBasedTests;
 
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
-import pages.targetMarket.CheckOutPage;
-import pages.targetMarket.InarHomePage;
-import pages.targetMarket.ShoppingCartPage;
-import pages.targetMarket.TargetMarketHomePage;
-import pages.targetMarket.LoginPage;
+import pages.targetMarket.*;
 import utils.DriverManager;
 
-public class Hooks2 {
+public class HooksPriority {
 
 	protected InarHomePage homePage;
 
@@ -20,6 +19,7 @@ public class Hooks2 {
 	protected ShoppingCartPage shoppingCartPage;
 
 	protected TargetMarketHomePage targetMarketHomePage;
+
 	protected SoftAssert softAssert = new SoftAssert();
 
 	@Parameters("browser")
