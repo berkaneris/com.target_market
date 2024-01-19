@@ -19,8 +19,8 @@ public class SortByTest_03 extends Hooks {
 		BrowserUtils.wait(4);
 		BrowserUtils.scrollDownWithPageDown();
 		targetMarketHomePage.clickOnLaptopsTab();
-		targetMarketHomePage.sortBy("Lowest Price");
 		List<Integer> priceOfProducts = targetMarketHomePage.getPriceList();
+		targetMarketHomePage.sortBy("Lowest Price");
 		List<Integer> priceOfProducts2 = targetMarketHomePage.getPriceList();
 		Collections.sort(priceOfProducts);
 		Assert.assertEquals(priceOfProducts, priceOfProducts2);

@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.targetMarket.InarHomePage;
 
-public class ECommerceUserFlowTest extends Hooks2 {
+public class UserFlowTest_01 extends HooksPriority {
 
 	@Test(priority = 1)
 	public void loginTest() {
@@ -13,6 +13,7 @@ public class ECommerceUserFlowTest extends Hooks2 {
 		targetMarketHomePage = loginPage.loginWithStandardUser();
 		Assert.assertTrue(loginPage.isLoginSuccessful(), "User should be successfully logged in.");
 	}
+
 	@Test(priority = 2, dependsOnMethods = "loginTest")
 	public void addToCartTest() {
 		targetMarketHomePage.clickOnSmartPhonesTab();
@@ -21,6 +22,7 @@ public class ECommerceUserFlowTest extends Hooks2 {
 		Assert.assertTrue(shoppingCartPage.isItemOnCart("iPhone X"),
 				"Product should be successfully added to the cart.");
 	}
+
 	@Test(priority = 3, dependsOnMethods = "addToCartTest")
 	public void placeOrderTest() {
 		checkOutPage = shoppingCartPage.clickOnCheckoutButton();
@@ -29,4 +31,5 @@ public class ECommerceUserFlowTest extends Hooks2 {
 		Assert.assertTrue(targetMarketHomePage.isOrderConfirmationBoxDisplayed(),
 				"Order should be successfully placed and confirmed.");
 	}
+
 }

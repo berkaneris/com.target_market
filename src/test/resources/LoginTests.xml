@@ -8,6 +8,7 @@
             <class name="tests.targetMarketLoginPageTests.LoginPageTest_02"/>
             <class name="tests.targetMarketLoginPageTests.LoginPageTest_03"/>
             <class name="tests.targetMarketLoginPageTests.LoginPageTest_04"/>
+            <class name="tests.targetMarketLoginPageTests.LoginPageTest_05"/>
         </classes>
     </test>
     <test name="Parallel Test On Edge">
@@ -17,6 +18,17 @@
             <class name="tests.targetMarketLoginPageTests.LoginPageTest_02"/>
             <class name="tests.targetMarketLoginPageTests.LoginPageTest_03"/>
             <class name="tests.targetMarketLoginPageTests.LoginPageTest_04"/>
+            <class name="tests.targetMarketLoginPageTests.LoginPageTest_05"/>
+        </classes>
+    </test>
+    <test name="Parallel Test On Firefox">
+        <parameter name ="browser" value ="firefox"/>
+        <classes>
+            <class name="tests.targetMarketLoginPageTests.LoginPageTest_01"/>
+            <class name="tests.targetMarketLoginPageTests.LoginPageTest_02"/>
+            <class name="tests.targetMarketLoginPageTests.LoginPageTest_03"/>
+            <class name="tests.targetMarketLoginPageTests.LoginPageTest_04"/>
+            <class name="tests.targetMarketLoginPageTests.LoginPageTest_05"/>
         </classes>
     </test>
 </suite>

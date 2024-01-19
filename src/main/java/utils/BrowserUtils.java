@@ -8,12 +8,14 @@ import java.nio.file.Files;
 
 public class BrowserUtils {
 
-	private static Actions actions = new Actions(DriverManager.getDriver());
+	private static Actions actions;
 	public static void scrollDownWithPageDown() {
+		actions = new Actions(DriverManager.getDriver());
 		actions.keyDown(Keys.PAGE_DOWN).release().build().perform();
 		wait(1);
 	}
 	public static void scrollUpWithPageUp() {
+		actions = new Actions(DriverManager.getDriver());
 		actions.keyDown(Keys.PAGE_UP).release().build().perform();
 		wait(1);
 	}
@@ -74,11 +76,7 @@ public class BrowserUtils {
 	}
 	public static void scrollTabsLine(int pixel){
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) DriverManager.getDriver();
-		jsExecutor.executeScript("document.querySelector('#splide02-list').setAttribute('style', 'transform: translateX(" + pixel + "px)');");
-	}
-	public static void clickOnWebElement(WebElement element){
-		JavascriptExecutor jsExecutor = (JavascriptExecutor) DriverManager.getDriver();
-		jsExecutor.executeScript("arguments[0].click();", element);
+		jsExecutor.executeScript("document.querySelector('div[role=\"tablist\"] ul').setAttribute('style', 'transform: translateX(" + pixel + "px)');");
 	}
 
 	public static void scrollToTheStartOfPage(){
