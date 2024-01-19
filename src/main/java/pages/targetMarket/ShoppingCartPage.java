@@ -117,10 +117,6 @@ public class ShoppingCartPage extends BasePage {
     }
 
     public int getNumberOfItemInTheCart() {
-        int count = 0;
-        for (int i = 0; i < ItemsOnCart.size(); i++) {
-            count++;
-        }
-        return count;
+      return ItemsOnCart.size();
     }
 }

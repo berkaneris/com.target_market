@@ -13,7 +13,7 @@ import utils.BrowserUtils;
 
 import java.util.List;
 
-public class totalPriceInCartTest extends Hooks {
+public class ShoppingCartTest_03 extends Hooks {
 
     @Test
     public void cartGetEmptyAfterShoppingTest() {

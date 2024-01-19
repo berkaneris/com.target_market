@@ -2,7 +2,6 @@ package tests.ProblemUser;
 
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.targetMarket.InarHomePage;
@@ -14,7 +13,7 @@ import utils.BrowserUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RandomParameterTest_002 extends Hooks {
+public class UserFlowTest_01 extends Hooks {
 
 
 

@@ -11,7 +11,7 @@ import utils.BrowserUtils;
 import java.util.Collections;
 import java.util.List;
 
-public class SortByTest extends Hooks {
+public class SortByTest_01 extends Hooks {
     @Test
     public void sortByCheck() {
         homePage = new InarHomePage();

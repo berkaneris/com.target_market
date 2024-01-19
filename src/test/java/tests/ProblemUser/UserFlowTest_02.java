@@ -12,7 +12,7 @@ import utils.BrowserUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RandomParaMeterTest_001 extends Hooks {
+public class UserFlowTest_02 extends Hooks {
 
     @Test
     public void randomParameterTest() {
