@@ -16,14 +16,12 @@
         <browser>chrome</browser>
     </properties>
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.9.0</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -34,7 +32,6 @@
             <artifactId>extentreports</artifactId>
             <version>5.1.1</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -59,6 +56,9 @@
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/LoginTests.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/DataProviderTests.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/SortFunctionTests.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/UserFlowTests.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

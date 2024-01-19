@@ -8,9 +8,9 @@ import pages.targetMarket.InarHomePage;
 import tests.Hooks;
 import utils.BrowserUtils;
 
-public class EndToEndTest extends Hooks {
+public class CheckoutTest_01 extends Hooks {
     @Test
-    public void ilkGözükenCarttaÜrünSAyısıGüncelleme() {
+    public void testSuccessfulCheckoutProcess() {
         homePage = new InarHomePage();
         loginPage = homePage.clickTargetMarketLink();
         targetMarketHomePage = loginPage.loginWithProblemUser();

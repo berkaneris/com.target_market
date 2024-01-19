@@ -12,7 +12,7 @@ import utils.BrowserUtils;
 
 import java.util.List;
 
-public class AfterLogOutCartTest extends Hooks {
+public class ShoppingCartTest_01 extends Hooks {
 
     @Test
     public void cartAfterLogOut() {

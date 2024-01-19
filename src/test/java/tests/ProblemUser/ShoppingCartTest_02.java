@@ -8,9 +8,9 @@ import pages.targetMarket.InarHomePage;
 import tests.Hooks;
 import utils.BrowserUtils;
 
-public class increaseTheQuantityOfProductInCartTest extends Hooks {
+public class ShoppingCartTest_02 extends Hooks {
     @Test
-    public void ilkGözükenCarttaÜrünSAyısıGüncelleme() {
+    public void testItemQuantityUpdateProcessOnShoppingCart() {
         homePage = new InarHomePage();
         loginPage = homePage.clickTargetMarketLink();
         targetMarketHomePage = loginPage.loginWithProblemUser();
