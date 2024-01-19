@@ -1,7 +1,7 @@
 # com.target_market
-***
+
 ## Description
-***
+
 
 - This is a test automation project for Target Market website on Inar Academy
 - This project written in java as programming language.
@@ -9,7 +9,7 @@
 - The goal of the project test the functions on website according to user process.
 
 ## Getting Started
-***
+
 
 ### **Dependencies**
 
@@ -29,7 +29,7 @@
  - Use maven commands in terminal or use an integrated development environment (IDE) 
 
 ## **Authors**
-***
+
 Inar Academy team-4 members collaboration.
 
 
