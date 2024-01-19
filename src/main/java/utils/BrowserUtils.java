@@ -70,6 +70,7 @@ public class BrowserUtils {
 
 		// Use JavaScript to scroll down the entire page
 		jsExecutor.executeScript("window.scrollBy(" + i + ", " + i1 +");");
+		BrowserUtils.wait(1);
 	}
 	public static void scrollTabsLine(int pixel){
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) DriverManager.getDriver();
@@ -78,5 +79,9 @@ public class BrowserUtils {
 	public static void clickOnWebElement(WebElement element){
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) DriverManager.getDriver();
 		jsExecutor.executeScript("arguments[0].click();", element);
+	}
+
+	public static void scrollToTheStartOfPage(){
+		scrollDownWithJavaScript(0,-40000);
 	}
 }
