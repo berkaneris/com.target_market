@@ -3,6 +3,7 @@ package tests.standartUserTests.checkOutPageTests;
 import tests.Hooks;
 import org.testng.annotations.Test;
 import pages.targetMarket.InarHomePage;
+import utils.BrowserUtils;
 
 public class CheckOutTest_02 extends Hooks {
 
@@ -11,9 +12,10 @@ public class CheckOutTest_02 extends Hooks {
 		homePage = new InarHomePage();
 		loginPage = homePage.clickTargetMarketLink();
 		targetMarketHomePage = loginPage.loginWithStandardUser();
+		BrowserUtils.scrollDownWithPageDown();
 		targetMarketHomePage.clickOnLaptopsTab();
+		BrowserUtils.scrollDownWithPageDown();
 		targetMarketHomePage.clickOnAddButton("MacBook Pro");
-
 		softAssert.assertTrue(targetMarketHomePage.isAddedToCartButtonDisplayed("MacBook Pro"));
 		shoppingCartPage = targetMarketHomePage.clickOnShoppingButton();
 		checkOutPage = shoppingCartPage.clickOnCheckoutButton();
