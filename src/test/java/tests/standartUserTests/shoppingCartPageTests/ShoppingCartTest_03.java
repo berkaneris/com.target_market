@@ -18,11 +18,11 @@ public class ShoppingCartTest_03 extends Hooks {
 		shoppingCartPage = targetMarketHomePage.clickOnShoppingButton();
 		shoppingCartPage.clickPlusButtonForItem("iPhone 9");
 		String itemPriceOnCart = shoppingCartPage.getItemPrice("Samsung Universe 9");
-		softAssert.assertEquals(itemPriceOnCart , "$1249" , "Wrong Price for Item!");
+		softAssert.assertEquals(itemPriceOnCart, "$1249", "Wrong Price for Item!");
 		itemPriceOnCart = shoppingCartPage.getItemPrice("iPhone X");
-		softAssert.assertEquals(itemPriceOnCart , "$899" , "Wrong Price for Item!");
+		softAssert.assertEquals(itemPriceOnCart, "$899", "Wrong Price for Item!");
 		itemPriceOnCart = shoppingCartPage.getItemPrice("iPhone 9");
-		softAssert.assertEquals(itemPriceOnCart , "$549" , "Wrong Price for Item!");
+		softAssert.assertEquals(itemPriceOnCart, "$549", "Wrong Price for Item!");
 		softAssert.assertAll();
 	}
 

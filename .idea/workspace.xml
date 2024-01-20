@@ -6,23 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="f729cf59-6ff5-4272-85ce-2fcd08c3a24e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/targetMarket/Photos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/targetMarket/CheckOutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/targetMarket/CheckOutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/targetMarket/InarHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/targetMarket/InarHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/targetMarket/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/targetMarket/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/targetMarket/ShoppingCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/targetMarket/ShoppingCartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/AfterLogOutCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/ShoppingCartTest_01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/EndToEndTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/CheckoutTest_01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/RandomParaMeterTest_001.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/UserFlowTest_02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/RandomParameterTest_002.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/UserFlowTest_01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/SortByTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/SortByTest_01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/increaseTheQuantityOfProductInCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/ShoppingCartTest_02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/totalPriceInCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/ShoppingCartTest_03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/targetMarket/TargetMarketHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/targetMarket/TargetMarketHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/BrowserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/BrowserUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/CheckoutTest_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/CheckoutTest_01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/ShoppingCartTest_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/ShoppingCartTest_01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/ShoppingCartTest_02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/ShoppingCartTest_02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/ShoppingCartTest_03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/ShoppingCartTest_03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/SortByTest_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/SortByTest_01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/UserFlowTest_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/UserFlowTest_01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/UserFlowTest_02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProblemUser/UserFlowTest_02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/listeners/ExtentTestNGITestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/listeners/ExtentTestNGITestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/priorityBasedTests/UserFlowTest_02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/priorityBasedTests/UserFlowTest_02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/checkOutPageTests/CheckOutTest_06.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/checkOutPageTests/CheckOutTest_06.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/shoppingCartPageTests/ShoppingCartTest_03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/shoppingCartPageTests/ShoppingCartTest_03.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/DataProviderTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/DataProviderTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/LoginTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/LoginTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/SortFunctionTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/SortFunctionTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/UserFlowTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/UserFlowTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/shoppingCartPageTests/ShoppingCartTest_06.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/shoppingCartPageTests/ShoppingCartTest_06.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/LogoutTest_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/LogoutTest_01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/LogoutTest_02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/LogoutTest_02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/SortByTest_04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/SortByTest_04.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/TabHeaderTest_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/standartUserTests/targetMarketHomePageTests/TabHeaderTest_01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testReports/extent.html" beforeDir="false" afterPath="$PROJECT_DIR$/testReports/extent.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +85,7 @@
     "TestNG.CheckOutTest_04.executor": "Run",
     "TestNG.CheckOutTest_04.testCheckOutWithDifferentUsers.executor": "Run",
     "TestNG.CheckOutTest_06.executor": "Run",
+    "TestNG.CheckoutTest_01.executor": "Run",
     "TestNG.ECommerceUserFlowTest.executor": "Run",
     "TestNG.EmptyShoppingCartTest.testEmptyShoppingCart (1).executor": "Run",
     "TestNG.EmptyShoppingCartTest.testEmptyShoppingCart.executor": "Run",
@@ -90,17 +100,23 @@
     "TestNG.SelectedItemInformationTest.executor": "Run",
     "TestNG.SelectedItemInformationTest.testItemSelectionOnTargetMarketHomePage.executor": "Run",
     "TestNG.SelectedItemInformationTest.testLoginProcess.executor": "Run",
+    "TestNG.ShoppingCartTest_01.executor": "Run",
     "TestNG.ShoppingCartTest_01.testEmptyShoppingCart.executor": "Run",
+    "TestNG.ShoppingCartTest_02.executor": "Run",
     "TestNG.ShoppingCartTest_02.testSelectedItemsOnShoppingCart.executor": "Run",
+    "TestNG.ShoppingCartTest_03.executor": "Run",
     "TestNG.ShoppingCartTest_03.testShoppingCartPrice.executor": "Run",
     "TestNG.ShoppingCartTest_04.executor": "Run",
     "TestNG.ShoppingCartTest_05.executor": "Run",
     "TestNG.ShoppingCartTest_06.executor": "Run",
     "TestNG.ShoppingCartTest_06.testShoppingCartTotalPrice.executor": "Run",
+    "TestNG.SortByTest_01.executor": "Run",
     "TestNG.SortByTest_02.executor": "Run",
     "TestNG.StandartUserFromLoginToLogoutTest.executor": "Run",
     "TestNG.StandartUserFromLoginToLogoutTest.selectItemTest.executor": "Run",
     "TestNG.TabHeaderTest_01.executor": "Run",
+    "TestNG.UserFlowTest_01.executor": "Run",
+    "TestNG.UserFlowTest_02.executor": "Run",
     "TestNG.checkenabled.executor": "Run",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -127,8 +143,8 @@
       <recent name="tests.listeners" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/asus/workspace2/com.target_market/src/test/resources/UserFlowTests.xml">
-    <configuration name="C:/Users/asus/OneDrive/Masaüstü/New folder/com.target_market/src/test/resources/DataProviderTests.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.C:/Users/asus/workspace2/com.target_market/src/test/resources/DataProviderTests.xml">
+    <configuration name="C:/Users/asus/workspace2/com.target_market/src/test/resources/DataProviderTests.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="com.target_market" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/DataProviderTests.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
@@ -138,26 +154,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/Users/asus/workspace2/com.target_market/src/test/resources/UserFlowTests.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="com.target_market" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/UserFlowTests.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CheckOutTest_06" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckoutTest_01" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="com.target_market" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.standartUserTests.checkOutPageTests.*" />
+          <option name="PATTERN" value="tests.ProblemUser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.standartUserTests.checkOutPageTests" />
-      <option name="MAIN_CLASS_NAME" value="tests.standartUserTests.checkOutPageTests.CheckOutTest_06" />
+      <option name="PACKAGE_NAME" value="tests.ProblemUser" />
+      <option name="MAIN_CLASS_NAME" value="tests.ProblemUser.CheckoutTest_01" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -165,16 +171,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TabHeaderTest_01" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ShoppingCartTest_01" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="com.target_market" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.standartUserTests.targetMarketHomePageTests.*" />
+          <option name="PATTERN" value="tests.ProblemUser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.standartUserTests.targetMarketHomePageTests" />
-      <option name="MAIN_CLASS_NAME" value="tests.standartUserTests.targetMarketHomePageTests.TabHeaderTest_01" />
+      <option name="PACKAGE_NAME" value="tests.ProblemUser" />
+      <option name="MAIN_CLASS_NAME" value="tests.ProblemUser.ShoppingCartTest_01" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -182,16 +188,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="checkenabled" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ShoppingCartTest_02" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="com.target_market" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.standartUserTests.targetMarketHomePageTests.*" />
+          <option name="PATTERN" value="tests.ProblemUser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.standartUserTests.targetMarketHomePageTests" />
-      <option name="MAIN_CLASS_NAME" value="tests.standartUserTests.targetMarketHomePageTests.checkenabled" />
+      <option name="PACKAGE_NAME" value="tests.ProblemUser" />
+      <option name="MAIN_CLASS_NAME" value="tests.ProblemUser.ShoppingCartTest_02" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShoppingCartTest_03" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="com.target_market" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.ProblemUser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.ProblemUser" />
+      <option name="MAIN_CLASS_NAME" value="tests.ProblemUser.ShoppingCartTest_03" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -201,11 +224,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/asus/workspace2/com.target_market/src/test/resources/UserFlowTests.xml" />
-        <item itemvalue="TestNG.C:/Users/asus/OneDrive/Masaüstü/New folder/com.target_market/src/test/resources/DataProviderTests.xml" />
-        <item itemvalue="TestNG.CheckOutTest_06" />
-        <item itemvalue="TestNG.TabHeaderTest_01" />
-        <item itemvalue="TestNG.checkenabled" />
+        <item itemvalue="TestNG.C:/Users/asus/workspace2/com.target_market/src/test/resources/DataProviderTests.xml" />
+        <item itemvalue="TestNG.CheckoutTest_01" />
+        <item itemvalue="TestNG.ShoppingCartTest_01" />
+        <item itemvalue="TestNG.ShoppingCartTest_02" />
+        <item itemvalue="TestNG.ShoppingCartTest_03" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +261,8 @@
       <workItem from="1705476759698" duration="34445000" />
       <workItem from="1705561316658" duration="18320000" />
       <workItem from="1705681873645" duration="1173000" />
-      <workItem from="1705684174824" duration="12028000" />
+      <workItem from="1705684174824" duration="13242000" />
+      <workItem from="1705736845170" duration="3086000" />
     </task>
     <servers />
   </component>
@@ -249,5 +273,17 @@
     <option featureType="dependencySupport" implementationName="java:io.reactivex.rxjava3:rxjava" />
     <option featureType="dependencySupport" implementationName="java:org.seleniumhq.selenium:selenium-java" />
     <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/targetMarket/ShoppingCartPage.java</url>
+          <line>22</line>
+          <properties field="ItemsOnCart" class="pages.targetMarket.ShoppingCartPage" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

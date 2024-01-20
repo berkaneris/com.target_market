@@ -15,129 +15,123 @@ import java.util.List;
 
 public class UserFlowTest_01 extends Hooks {
 
+	@Test
+	public void randomParameterTest() {
+		homePage = new InarHomePage();
+		loginPage = homePage.clickTargetMarketLink();
+		targetMarketHomePage = loginPage.loginWithProblemUser();
+		BrowserUtils.wait(4);
+		BrowserUtils.wait(4);
+		BrowserUtils.scrollDownWithPageDown();
 
+		String chosenItem;
+		SoftAssert softAssert = new SoftAssert();
+		int expectedNumberOfProductsInCart = 0;
+		List<String> selectedItems = new ArrayList<>();
+		boolean isContinue;
 
-    @Test
-    public void randomParameterTest() {
-        InarHomePage homePage = new InarHomePage();
-        LoginPage loginPage = homePage.clickTargetMarketLink();
-        TargetMarketHomePage targetMarketHomePage = loginPage.loginWithProblemUser();
-        BrowserUtils.wait(4);
-        BrowserUtils.wait(4);
-        BrowserUtils.scrollDownWithPageDown();
+		do {
+			isContinue = true;
+			// choose the page randomly
+			List<String> tabsNameList = targetMarketHomePage.getTabsName();
+			int getTheTabRandomly = Math.abs((int) (Math.random() * tabsNameList.size()) - 3);
 
-        String chosenItem;
-        SoftAssert softAssert = new SoftAssert();
-        int expectedNumberOfProductsInCart = 0;
-        List<String> selectedItems = new ArrayList<>();
-        boolean isContinue ;
+			try {
+				targetMarketHomePage.clickOnTab(tabsNameList.get(getTheTabRandomly));
+			}
+			catch (ElementClickInterceptedException ex) {
+				System.out.println(tabsNameList.get(getTheTabRandomly) + " should be clickable ");
+				softAssert.assertTrue(isContinue, tabsNameList.get(getTheTabRandomly) + " should be clickable ");
+				isContinue = false;
 
-        do {
-            isContinue =true;
-            //choose the page randomly
-            List<String> tabsNameList = targetMarketHomePage.getTabsName();
-            int getTheTabRandomly = Math.abs((int) (Math.random() * tabsNameList.size()) - 3);
+			}
+		}
+		while (!isContinue);
+		// verify that clicked page similar to head tag
 
-            try {
-                targetMarketHomePage.clickOnTab(tabsNameList.get(getTheTabRandomly));
-            } catch (ElementClickInterceptedException ex) {
-                System.out.println(tabsNameList.get(getTheTabRandomly) + " should be clickable ");
-                softAssert.assertTrue(isContinue, tabsNameList.get(getTheTabRandomly) + " should be clickable ");
-                isContinue = false;
+		// choose the item randomly
 
-            }
-        } while (!isContinue);
-        //verify that clicked page similar to head tag
+		do {
+			List<String> namesOfItemInTheList = targetMarketHomePage.getItemNameList2();
+			int getTheItemRandomly = (int) (Math.random() * namesOfItemInTheList.size());
+			chosenItem = namesOfItemInTheList.get(getTheItemRandomly);
+			targetMarketHomePage.scrollToTheItem(chosenItem);
+			try {
+				targetMarketHomePage.clickOnAddButton(chosenItem);
+				BrowserUtils.wait(1);
+				expectedNumberOfProductsInCart++;
+				selectedItems.add(chosenItem);
+			}
+			catch (ElementClickInterceptedException ex) {
+				System.out.println(chosenItem + " should be clickable ");
+				softAssert.assertTrue(isContinue, chosenItem + " should be clickable ");
+				isContinue = false;
+			}
+		}
+		while (!isContinue);
 
+		// click to add button
 
+		// verify that added the cart message displayed
+		softAssert.assertTrue(targetMarketHomePage.isProductAddedToCartMessageDisplayed());
 
-        // choose the item randomly
+		// verify that only there is one item in cart about that product
+		shoppingCartPage = targetMarketHomePage.clickOnShoppingButton();
+		String quantityOfItemOnCart = shoppingCartPage.getItemQuantityOnCart(chosenItem);
+		softAssert.assertEquals("1", quantityOfItemOnCart);
 
-        do {
-            List<String> namesOfItemInTheList = targetMarketHomePage.getItemNameList2();
-            int getTheItemRandomly = (int) (Math.random() * namesOfItemInTheList.size());
-            chosenItem = namesOfItemInTheList.get(getTheItemRandomly);
-            targetMarketHomePage.scrollToTheItem(chosenItem);
-            try {
-                targetMarketHomePage.clickOnAddButton(chosenItem);
-                BrowserUtils.wait(3);
-                expectedNumberOfProductsInCart++;
-                selectedItems.add(chosenItem);
-            } catch (ElementClickInterceptedException ex) {
-                System.out.println(chosenItem + " should be clickable ");
-                softAssert.assertTrue(isContinue, chosenItem + " should be clickable ");
-                isContinue = false;
-            }
-        } while (!isContinue);
+		// verify that number of product is true
+		int actualNumberOfProductsInCart = shoppingCartPage.getNumberOfItemInTheCart();
+		softAssert.assertEquals(actualNumberOfProductsInCart, expectedNumberOfProductsInCart);
 
+		// verify that names in cart is true;
+		List<String> productNameInTheCart = shoppingCartPage.getItemNamesOnCart();
+		softAssert.assertTrue(productNameInTheCart.equals(selectedItems));
 
-        //click to add button
+		// increase the quantity of a product
 
+		shoppingCartPage.clickPlusButtonForItem(chosenItem);
+		shoppingCartPage.clickPlusButtonForItem(chosenItem);
+		shoppingCartPage.clickPlusButtonForItem(chosenItem);
+		quantityOfItemOnCart = shoppingCartPage.getItemQuantityOnCart(chosenItem);
+		softAssert.assertEquals("4", quantityOfItemOnCart);
 
-        //verify that added the cart message displayed
-        softAssert.assertTrue(targetMarketHomePage.isProductAddedToCartMessageDisplayed());
+		// decrease 1 times products
+		shoppingCartPage.clickMinusButtonForItem(chosenItem);
+		quantityOfItemOnCart = shoppingCartPage.getItemQuantityOnCart(chosenItem);
+		softAssert.assertEquals("3", quantityOfItemOnCart);
 
+		// go to check out
+		BrowserUtils.wait(1);
 
-        //verify that only there is  one item in cart about that product
-        shoppingCartPage = targetMarketHomePage.clickOnShoppingButton();
-        String quantityOfItemOnCart = shoppingCartPage.getItemQuantityOnCart(chosenItem);
-        softAssert.assertEquals("1", quantityOfItemOnCart);
+		shoppingCartPage.clickOnCheckoutButton();
+		BrowserUtils.wait(1);
 
-        //verify that number of product is true
-        int actualNumberOfProductsInCart = shoppingCartPage.getNumberOfItemInTheCart();
-        softAssert.assertEquals(actualNumberOfProductsInCart, expectedNumberOfProductsInCart);
+		//
+		shoppingCartPage = targetMarketHomePage.clickOnShoppingButton();
+		checkOutPage = shoppingCartPage.clickOnCheckoutButton();
+		BrowserUtils.wait(1);
+		checkOutPage.enterAllInformation("jimmy", "durmaz", "Iowa", "9874563217412589", "4563218520");
+		BrowserUtils.wait(1);
+		BrowserUtils.scrollDownWithPageDown();
+		checkOutPage.clickOnPlaceOrder();
 
-        //verify that names in cart is true;
-        List<String> productNameInTheCart = shoppingCartPage.getItemNamesOnCart();
-        softAssert.assertTrue(productNameInTheCart.equals(selectedItems));
+		// verify that verificaiton message diplayed
+		boolean actual = targetMarketHomePage.isOrderConfirmationBoxDisplayed();
+		softAssert.assertTrue(actual);
 
+		targetMarketHomePage.closeTheTabPopUpAfterPurchase();
 
-        //increase the quantity of a product
+		// verify that you are in All page
+		String expectedTabName = "All";
+		String actualTabName = targetMarketHomePage.getTabNameHeader();
+		Assert.assertEquals(actualTabName, expectedTabName);
 
-        shoppingCartPage.clickPlusButtonForItem(chosenItem);
-        shoppingCartPage.clickPlusButtonForItem(chosenItem);
-        shoppingCartPage.clickPlusButtonForItem(chosenItem);
-        quantityOfItemOnCart = shoppingCartPage.getItemQuantityOnCart(chosenItem);
-        softAssert.assertEquals("4", quantityOfItemOnCart);
+		// verify logout process funtion
+		targetMarketHomePage.clickOnLogoutButton();
+		Assert.assertTrue(loginPage.isLoginPageTextDisplayed());
 
-
-        //decrease 1 times products
-        shoppingCartPage.clickMinusButtonForItem(chosenItem);
-        quantityOfItemOnCart = shoppingCartPage.getItemQuantityOnCart(chosenItem);
-        softAssert.assertEquals("3", quantityOfItemOnCart);
-
-        //go to check out
-        BrowserUtils.wait(1);
-
-        shoppingCartPage.clickOnCheckoutButton();
-        BrowserUtils.wait(1);
-
-        //
-        shoppingCartPage = targetMarketHomePage.clickOnShoppingButton();
-        checkOutPage = shoppingCartPage.clickOnCheckoutButton();
-        BrowserUtils.wait(1);
-        checkOutPage.enterAllInformation("jimmy", "durmaz", "Iowa", "9874563217412589", "4563218520");
-        BrowserUtils.wait(1);
-        BrowserUtils.scrollDownWithPageDown();
-        checkOutPage.clickOnPlaceOrder();
-
-        //verify that verificaiton message diplayed
-        boolean actual = targetMarketHomePage.isOrderConfirmationBoxDisplayed();
-        softAssert.assertTrue(actual);
-
-        targetMarketHomePage.closeTheTabPopUpAfterPurchase();
-
-        //verify that you are in All page
-        String expectedTabName = "All";
-        String actualTabName = targetMarketHomePage.getTabNameHeader();
-        Assert.assertEquals(actualTabName, expectedTabName);
-
-        //verify logout process funtion
-        targetMarketHomePage.clickOnLogoutButton();
-        Assert.assertTrue(loginPage.isLoginPageTextDisplayed());
-
-        softAssert.assertAll();
-    }
+		softAssert.assertAll();
+	}
 
 }
-

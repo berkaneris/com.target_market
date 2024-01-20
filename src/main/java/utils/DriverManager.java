@@ -8,12 +8,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class DriverManager {
 
 	private static final ThreadLocal<WebDriver> DRIVER_THREAD_LOCAL = new ThreadLocal<>();
+
 	private DriverManager() {
 		throw new UnsupportedOperationException("Cannot instantiate utility class");
 	}
+
 	public synchronized static WebDriver getDriver() {
 		return getDriver(System.getProperty("browser", "chrome"));
 	}
+
 	public synchronized static WebDriver getDriver(String browserType) {
 		if (DRIVER_THREAD_LOCAL.get() == null) {
 			WebDriver driver;
@@ -44,6 +47,7 @@ public class DriverManager {
 		}
 		return DRIVER_THREAD_LOCAL.get();
 	}
+
 	public static void closeDriver() {
 		WebDriver currentDriver = DRIVER_THREAD_LOCAL.get();
 		if (currentDriver != null) {
@@ -51,4 +55,5 @@ public class DriverManager {
 			DRIVER_THREAD_LOCAL.remove();
 		}
 	}
+
 }

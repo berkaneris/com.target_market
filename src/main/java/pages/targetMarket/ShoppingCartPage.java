@@ -10,113 +10,120 @@ import java.util.*;
 
 public class ShoppingCartPage extends BasePage {
 
-    @FindBy(xpath = "//button[text()='Go to Checkout']")
-    private WebElement checkoutButton;
-    @FindBy(xpath = "//button[text()='Close']")
-    private WebElement closeButton;
-    @FindBy(css = "button[aria-label='Close']")
-    private WebElement crossButton;
-    @FindBy(css = "div[class='mb-3 list-group'] > div")
-    private List<WebElement> ItemsOnCart;
-    @FindBy(css = ".text-start p")
-    private WebElement totalPrice;
-    @FindBy(xpath = "//p[contains(text(), 'empty')]")
-    private WebElement emptyText;
+	@FindBy(xpath = "//button[text()='Go to Checkout']")
+	private WebElement checkoutButton;
 
-    private WebElement getItemOnCart(String itemName) {
-        for (int i = 0; i < ItemsOnCart.size(); i++) {
-            if (ItemsOnCart.get(i).findElement(By.cssSelector("h3")).getText().equals(itemName)) {
-                return ItemsOnCart.get(i);
-            }
-        }
-        return null;
-    }
+	@FindBy(xpath = "//button[text()='Close']")
+	private WebElement closeButton;
 
-    public boolean isItemOnCart(String itemName) {
-        return !Objects.isNull(getItemOnCart(itemName));
-    }
+	@FindBy(css = "button[aria-label='Close']")
+	private WebElement crossButton;
 
-    public void clickPlusButtonForItem(String itemName) {
-        if (isItemOnCart(itemName)) {
-            getItemOnCart(itemName).findElement(By.cssSelector("button:nth-child(3)")).click();
-        }
-    }
+	@FindBy(css = "div[class='mb-3 list-group'] > div")
+	private List<WebElement> ItemsOnCart;
 
-    public void clickMinusButtonForItem(String itemName) {
-        if (isItemOnCart(itemName)) {
-            getItemOnCart(itemName).findElement(By.cssSelector("button:nth-child(1)")).click();
-        }
-    }
+	@FindBy(css = ".text-start p")
+	private WebElement totalPrice;
 
-    public double getTotalPrice() {
-        String price = totalPrice.getText().substring(14);
-        return Double.parseDouble(price);
+	@FindBy(xpath = "//p[contains(text(), 'empty')]")
+	private WebElement emptyText;
 
-    }
+	private WebElement getItemOnCart(String itemName) {
+		for (int i = 0; i < ItemsOnCart.size(); i++) {
+			if (ItemsOnCart.get(i).findElement(By.cssSelector("h3")).getText().equals(itemName)) {
+				return ItemsOnCart.get(i);
+			}
+		}
+		return null;
+	}
 
-    public CheckOutPage clickOnCheckoutButton() {
-        try {
-            checkoutButton.click();
-            return new CheckOutPage();
-        } catch (NoSuchElementException ex) {
-            return null;
-        }
-    }
+	public boolean isItemOnCart(String itemName) {
+		return !Objects.isNull(getItemOnCart(itemName));
+	}
 
-    public TargetMarketHomePage clickOnCloseButton() {
-        closeButton.click();
-        return new TargetMarketHomePage();
-    }
+	public void clickPlusButtonForItem(String itemName) {
+		if (isItemOnCart(itemName)) {
+			getItemOnCart(itemName).findElement(By.cssSelector("button:nth-child(3)")).click();
+		}
+	}
 
-    public boolean isEmptyTextDisplayed() {
-        return emptyText.isDisplayed();
-    }
+	public void clickMinusButtonForItem(String itemName) {
+		if (isItemOnCart(itemName)) {
+			getItemOnCart(itemName).findElement(By.cssSelector("button:nth-child(1)")).click();
+		}
+	}
 
-    public String getItemPrice(String itemName) {
-        String price = getItemOnCart(itemName)
-                .findElement(By.cssSelector("div > div > p[class='text-muted mb-0 fs-4']:nth-child(2)"))
-                .getText();
-        return price.substring(0, price.length() - 11);
-    }
+	public double getTotalPrice() {
+		String price = totalPrice.getText().substring(14);
+		return Double.parseDouble(price);
 
-    public List<String> getItemNamesOnCart() {
-        List<String> itemNames = new ArrayList<>();
-        for (int i = 0; i < ItemsOnCart.size(); i++) {
-            itemNames.add(ItemsOnCart.get(i).findElement(By.cssSelector("h3")).getText());
-        }
-        return itemNames;
-    }
+	}
 
-    public List<List<String>> getItemsNamesAndValuesOnCart() {
-        List<List<String>> itemNameAndValues = new ArrayList<>();
-        for (int i = 0; i < ItemsOnCart.size(); i++) {
-            List<String> itemValues = new ArrayList<>();
-            String itemName = ItemsOnCart.get(i).findElement(By.cssSelector("h3")).getText();
-            itemValues.add(itemName);
-            itemValues.add(getItemPrice(itemName));
-            itemValues.add(getItemQuantityOnCart(itemName));
-            itemNameAndValues.add(itemValues);
-        }
-        return itemNameAndValues;
-    }
+	public CheckOutPage clickOnCheckoutButton() {
+		try {
+			checkoutButton.click();
+			return new CheckOutPage();
+		}
+		catch (NoSuchElementException ex) {
+			return null;
+		}
+	}
 
-    public String getItemTotalPriceOnCart(String itemName) {
-        String totalPrice = getItemOnCart(itemName)
-                .findElement(By.cssSelector("div > div > p[class='text-muted mb-0 fs-4']:nth-child(3)"))
-                .getText();
-        return totalPrice.substring(7);
-    }
+	public TargetMarketHomePage clickOnCloseButton() {
+		closeButton.click();
+		return new TargetMarketHomePage();
+	}
 
-    public String getItemQuantityOnCart(String itemName) {
-        String itemQuantity = getItemOnCart(itemName).findElement(By.cssSelector("div > div > div > span")).getText();
-        return itemQuantity;
-    }
+	public boolean isEmptyTextDisplayed() {
+		return emptyText.isDisplayed();
+	}
 
-    public int getItemQuantityValueOnCart(String itemName) {
-        return Integer.parseInt(getItemQuantityOnCart(itemName));
-    }
+	public String getItemPrice(String itemName) {
+		String price = getItemOnCart(itemName)
+			.findElement(By.cssSelector("div > div > p[class='text-muted mb-0 fs-4']:nth-child(2)"))
+			.getText();
+		return price.substring(0, price.length() - 11);
+	}
 
-    public int getNumberOfItemInTheCart() {
-      return ItemsOnCart.size();
-    }
+	public List<String> getItemNamesOnCart() {
+		List<String> itemNames = new ArrayList<>();
+		for (int i = 0; i < ItemsOnCart.size(); i++) {
+			itemNames.add(ItemsOnCart.get(i).findElement(By.cssSelector("h3")).getText());
+		}
+		return itemNames;
+	}
+
+	public List<List<String>> getItemsNamesAndValuesOnCart() {
+		List<List<String>> itemNameAndValues = new ArrayList<>();
+		for (int i = 0; i < ItemsOnCart.size(); i++) {
+			List<String> itemValues = new ArrayList<>();
+			String itemName = ItemsOnCart.get(i).findElement(By.cssSelector("h3")).getText();
+			itemValues.add(itemName);
+			itemValues.add(getItemPrice(itemName));
+			itemValues.add(getItemQuantityOnCart(itemName));
+			itemNameAndValues.add(itemValues);
+		}
+		return itemNameAndValues;
+	}
+
+	public String getItemTotalPriceOnCart(String itemName) {
+		String totalPrice = getItemOnCart(itemName)
+			.findElement(By.cssSelector("div > div > p[class='text-muted mb-0 fs-4']:nth-child(3)"))
+			.getText();
+		return totalPrice.substring(7);
+	}
+
+	public String getItemQuantityOnCart(String itemName) {
+		String itemQuantity = getItemOnCart(itemName).findElement(By.cssSelector("div > div > div > span")).getText();
+		return itemQuantity;
+	}
+
+	public int getItemQuantityValueOnCart(String itemName) {
+		return Integer.parseInt(getItemQuantityOnCart(itemName));
+	}
+
+	public int getNumberOfItemInTheCart() {
+		return ItemsOnCart.size();
+	}
+
 }

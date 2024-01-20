@@ -21,7 +21,7 @@ public class UserFlowTest_02 extends HooksPriority {
 		Assert.assertTrue(loginPage.isLoginSuccessful(), "User should be successfully logged in.");
 	}
 
-	@Test(priority = 2 , dependsOnMethods = "testLoginProcess")
+	@Test(priority = 2, dependsOnMethods = "testLoginProcess")
 	public void testItemSelectionOnTargetMarketHomePage() {
 		targetMarketHomePage.clickOnGroceriesTab();
 		targetMarketHomePage.clickOnAddButton("Elbow Macaroni - 400 gm");
@@ -42,7 +42,7 @@ public class UserFlowTest_02 extends HooksPriority {
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 3 , dependsOnMethods = "testItemSelectionOnTargetMarketHomePage")
+	@Test(priority = 3, dependsOnMethods = "testItemSelectionOnTargetMarketHomePage")
 	public void testItemsInformationOnShoppingCart() {
 		List<List<String>> itemsInformationOnShoppingCart = shoppingCartPage.getItemsNamesAndValuesOnCart();
 		softAssert.assertEquals(itemsInformationOnShoppingCart, expectedItemsInformation,
@@ -51,7 +51,7 @@ public class UserFlowTest_02 extends HooksPriority {
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 4 , dependsOnMethods = "testItemsInformationOnShoppingCart")
+	@Test(priority = 4, dependsOnMethods = "testItemsInformationOnShoppingCart")
 	public void testItemsInformationOnCheckoutPage() {
 		List<List<String>> itemsInformationOnCheckoutPage = checkOutPage.getItemsInformationList();
 		softAssert.assertEquals(itemsInformationOnCheckoutPage, expectedItemsInformation,

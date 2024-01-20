@@ -13,234 +13,240 @@ import java.util.*;
 
 public class TargetMarketHomePage extends BasePage {
 
-    @FindBy(css = "h5.display-5")
-    private WebElement welcomeText;
-    @FindBy(css = "div a[role='tab']")
-    private List<WebElement> tabsList;
-    @FindBy(xpath = "//button[text()='Logout']")
-    private WebElement logoutButton;
-    @FindBy(css = "button.mx-3:nth-child(2)")
-    private WebElement shoppingButton;
-    @FindBy(id = "sortType")
-    private WebElement sortDropDown;
-    @FindBy(css = "div.card-body")
-    private List<WebElement> itemsList;
-    @FindBy(css = ".display-1")
-    private WebElement tabNameHeader;
-    @FindBy(xpath = "//p[contains(text() , 'received')]")
-    private WebElement orderReceivedMessage;
-    @FindBy(css = "#target-market .text-center")
-    private WebElement orderConfirmationBox;
-    @FindBy(css = ".text-center.bg-light.p-5.rounded-3.position-relative")
-    private List<WebElement> messageAppearAfterPurchaseProcess;
+	@FindBy(css = "h5.display-5")
+	private WebElement welcomeText;
 
-    @FindBy(id = "splide02-list")
-    private List<WebElement> getTabsList;
+	@FindBy(css = "div a[role='tab']")
+	private List<WebElement> tabsList;
 
-    @FindBy(css = "div[role='alert']")
-    private WebElement productAddedToCartMessage;
+	@FindBy(xpath = "//button[text()='Logout']")
+	private WebElement logoutButton;
 
-    public void clickOnAllTab() {
-        clickOnTab("All");
-    }
+	@FindBy(css = "button.mx-3:nth-child(2)")
+	private WebElement shoppingButton;
 
-    public void clickOnSmartPhonesTab() {
-        clickOnTab("Smartphones");
-    }
+	@FindBy(id = "sortType")
+	private WebElement sortDropDown;
 
-    public void clickOnLaptopsTab() {
-        clickOnTab("Laptops");
-    }
+	@FindBy(css = "div.card-body")
+	private List<WebElement> itemsList;
 
-    public void clickOnSkincareTab() {
-        clickOnTab("Skincare");
-    }
+	@FindBy(css = ".display-1")
+	private WebElement tabNameHeader;
 
-    public void clickOnGroceriesTab() {
-        clickOnTab("Groceries");
-    }
+	@FindBy(xpath = "//p[contains(text() , 'received')]")
+	private WebElement orderReceivedMessage;
 
-    public void clickOnHomeDecorationTab() {
-        clickOnTab("Home Decoration");
-    }
+	@FindBy(css = "#target-market .text-center")
+	private WebElement orderConfirmationBox;
 
-    public void clickOnFurnitureTab() {
-        clickOnTab("Furniture");
-    }
+	@FindBy(css = ".text-center.bg-light.p-5.rounded-3.position-relative")
+	private List<WebElement> messageAppearAfterPurchaseProcess;
 
-    public void clickOnTopsTab() {
-        clickOnTab("Tops");
-    }
+	@FindBy(id = "splide02-list")
+	private List<WebElement> getTabsList;
 
-    public void clickOnWomenDressesTab() {
-        clickOnTab("Womens Dresses");
-    }
+	@FindBy(css = "div[role='alert']")
+	private WebElement productAddedToCartMessage;
 
-    public void clickOnWomenShoesTab() {
-        clickOnTab("Womens Shoes");
-    }
+	public void clickOnAllTab() {
+		clickOnTab("All");
+	}
 
-    public LoginPage clickOnLogoutButton() {
-        logoutButton.click();
-        return new LoginPage();
-    }
+	public void clickOnSmartPhonesTab() {
+		clickOnTab("Smartphones");
+	}
 
-    public String getWelcomeText() {
-        wait.until(ExpectedConditions.visibilityOf(welcomeText));
-        return welcomeText.getText();
-    }
+	public void clickOnLaptopsTab() {
+		clickOnTab("Laptops");
+	}
 
-    public boolean isWelcomeMessageDisplayed() {
-        try {
-            return welcomeText.isDisplayed();
-        } catch (NoSuchElementException ex) {
-            return false;
-        }
-    }
+	public void clickOnSkincareTab() {
+		clickOnTab("Skincare");
+	}
 
-    private WebElement getItem(String itemName) {
-        for (int i = 0; i < itemsList.size(); i++) {
-            if (BrowserUtils.getName(itemsList.get(i)).getText().equals(itemName)) {
-                return itemsList.get(i);
-            }
-        }
-        return null;
-    }
+	public void clickOnGroceriesTab() {
+		clickOnTab("Groceries");
+	}
 
-    public void clickOnAddButton(String itemName) {
-        BrowserUtils.getAddToCArtButton(getItem(itemName)).click();
-    }
+	public void clickOnHomeDecorationTab() {
+		clickOnTab("Home Decoration");
+	}
 
-    public String getAddedItemQuantity() {
-        return shoppingButton.findElement(By.cssSelector("span")).getText();
-    }
+	public void clickOnFurnitureTab() {
+		clickOnTab("Furniture");
+	}
 
-    public ShoppingCartPage clickOnShoppingButton() {
-        shoppingButton.click();
-        return new ShoppingCartPage();
-    }
+	public void clickOnTopsTab() {
+		clickOnTab("Tops");
+	}
 
-    public List<String> getItemNameList() {
-        List<String> itemNameList = new ArrayList<>();
-        for (int i = 0; i < itemsList.size(); i++) {
-            itemNameList.add(BrowserUtils.getName(itemsList.get(i)).getText().toLowerCase());
-        }
-        return itemNameList;
-    }
+	public void clickOnWomenDressesTab() {
+		clickOnTab("Womens Dresses");
+	}
 
-    public List<String> getItemNameList2() {
-        List<String> itemNameList = new ArrayList<>();
-        for (int i = 0; i < itemsList.size(); i++) {
-            itemNameList.add(BrowserUtils.getName(itemsList.get(i)).getText());
-        }
-        return itemNameList;
-    }
+	public void clickOnWomenShoesTab() {
+		clickOnTab("Womens Shoes");
+	}
 
-    public void sortBy(String sortSelectionText) {
-        Select select = new Select(sortDropDown);
-        select.selectByVisibleText(sortSelectionText);
-    }
+	public LoginPage clickOnLogoutButton() {
+		logoutButton.click();
+		return new LoginPage();
+	}
 
-    public List<Integer> getPriceList() {
-        List<Integer> priceList = new ArrayList<>();
-        for (int i = 0; i < itemsList.size(); i++) {
-            String price = BrowserUtils.getPrice(itemsList.get(i)).getText().substring(1);
-            priceList.add(Integer.parseInt(price));
-        }
-        return priceList;
-    }
+	public String getWelcomeText() {
+		wait.until(ExpectedConditions.visibilityOf(welcomeText));
+		return welcomeText.getText();
+	}
 
-    public boolean isAddedToCartButtonDisplayed(String itemName) {
-        return BrowserUtils.getAddToCArtButton(getItem(itemName)).getText().equals("Added to Cart");
-    }
+	public boolean isWelcomeMessageDisplayed() {
+		try {
+			return welcomeText.isDisplayed();
+		}
+		catch (NoSuchElementException ex) {
+			return false;
+		}
+	}
 
-    public String getTabNameHeader() {
-        return tabNameHeader.getText();
-    }
+	private WebElement getItem(String itemName) {
+		for (int i = 0; i < itemsList.size(); i++) {
+			if (BrowserUtils.getName(itemsList.get(i)).getText().equals(itemName)) {
+				return itemsList.get(i);
+			}
+		}
+		return null;
+	}
 
-    public boolean isOrderReceivedMessageDisplayed() {
-        return orderReceivedMessage.isDisplayed();
-    }
+	public void clickOnAddButton(String itemName) {
+		BrowserUtils.getAddToCArtButton(getItem(itemName)).click();
+	}
 
-    public boolean isOrderConfirmationBoxDisplayed() {
-        return orderConfirmationBox.isDisplayed();
-    }
+	public String getAddedItemQuantity() {
+		return shoppingButton.findElement(By.cssSelector("span")).getText();
+	}
 
-    public String getItemPrice(String itemName) {
-        return BrowserUtils.getPrice(getItem(itemName)).getText();
-    }
+	public ShoppingCartPage clickOnShoppingButton() {
+		shoppingButton.click();
+		return new ShoppingCartPage();
+	}
 
-    public double getItemPriceValue(String itemName) {
-        return Double.parseDouble(getItemPrice(itemName).substring(1));
-    }
+	public List<String> getItemNameList() {
+		List<String> itemNameList = new ArrayList<>();
+		for (int i = 0; i < itemsList.size(); i++) {
+			itemNameList.add(BrowserUtils.getName(itemsList.get(i)).getText().toLowerCase());
+		}
+		return itemNameList;
+	}
 
-    public void clickOnTab(String tabName) {
-        if (tabName.equals("Tops") || tabName.equals("Womens Dresses") || tabName.equals("Womens Shoes")) {
-            wait.until(ExpectedConditions.visibilityOf(welcomeText));
-            BrowserUtils.scrollTabsLine(-645);
-        } else {
-            wait.until(ExpectedConditions.visibilityOf(welcomeText));
-            BrowserUtils.scrollTabsLine(0);
-        }
-        for (int i = 0; i < tabsList.size(); i++) {
-            if (tabsList.get(i).findElement(By.cssSelector("span")).getText().equals(tabName)) {
-                tabsList.get(i).click();
-                break;
-            }
-        }
-    }
+	public List<String> getItemNameList2() {
+		List<String> itemNameList = new ArrayList<>();
+		for (int i = 0; i < itemsList.size(); i++) {
+			itemNameList.add(BrowserUtils.getName(itemsList.get(i)).getText());
+		}
+		return itemNameList;
+	}
 
-    public String messageAfterOrderProcessCompleted() {
-        String contex = "";
-        for (WebElement appearAfterPurchaseProcess : messageAppearAfterPurchaseProcess) {
-            contex += (appearAfterPurchaseProcess.getText());
-        }
-        return contex;
-    }
+	public void sortBy(String sortSelectionText) {
+		Select select = new Select(sortDropDown);
+		select.selectByVisibleText(sortSelectionText);
+	}
 
-    public void closeTheTabPopUpAfterPurchase() {
-        WebElement xButton = DriverManager.getDriver().findElement(By.cssSelector("button[aria-label='Close']"));
-        xButton.click();
-    }
+	public List<Integer> getPriceList() {
+		List<Integer> priceList = new ArrayList<>();
+		for (int i = 0; i < itemsList.size(); i++) {
+			String price = BrowserUtils.getPrice(itemsList.get(i)).getText().substring(1);
+			priceList.add(Integer.parseInt(price));
+		}
+		return priceList;
+	}
 
-    public List<String> getTabsName() {
-        List<String> tabsName = new ArrayList<>();
-        for (int i = 0; i < tabsList.size(); i++) {
-            tabsName.add(tabsList.get(i).findElement(By.cssSelector("span")).getText());
-        }
+	public boolean isAddedToCartButtonDisplayed(String itemName) {
+		return BrowserUtils.getAddToCArtButton(getItem(itemName)).getText().equals("Added to Cart");
+	}
 
+	public String getTabNameHeader() {
+		return tabNameHeader.getText();
+	}
 
-        return tabsName;
-    }
+	public boolean isOrderReceivedMessageDisplayed() {
+		return orderReceivedMessage.isDisplayed();
+	}
 
-    public boolean isProductAddedToCartMessageDisplayed() {
-        return productAddedToCartMessage.isDisplayed();
-    }
+	public boolean isOrderConfirmationBoxDisplayed() {
+		return orderConfirmationBox.isDisplayed();
+	}
 
-    public void scrollToTheItem(String nameOfProduct) {
-        BrowserUtils.scrollDownWithJavaScript(0,-2000);
-        int i;
-        for (i = 0; i < itemsList.size(); i++) {
-            if (BrowserUtils.getName(itemsList.get(i)).getText().equals(nameOfProduct)) {
-                BrowserUtils.scrollDownWithPageDown();
-                break;
-            }
-        }
-        System.out.println(" i  : "+i);
-        for (int m = 0; m < (i / 4)+1 ; m++) {
-            if (m < 5) {
-               BrowserUtils.scrollDownWithJavaScript(0,600);
-            } else {
-                BrowserUtils.scrollDownWithJavaScript(0,650);
+	public String getItemPrice(String itemName) {
+		return BrowserUtils.getPrice(getItem(itemName)).getText();
+	}
 
-            }
-        }
+	public double getItemPriceValue(String itemName) {
+		return Double.parseDouble(getItemPrice(itemName).substring(1));
+	}
 
+	public void clickOnTab(String tabName) {
+		if (tabName.equals("Tops") || tabName.equals("Womens Dresses") || tabName.equals("Womens Shoes")) {
+			wait.until(ExpectedConditions.visibilityOf(welcomeText));
+			BrowserUtils.scrollTabsLine(-645);
+		}
+		else {
+			wait.until(ExpectedConditions.visibilityOf(welcomeText));
+			BrowserUtils.scrollTabsLine(0);
+		}
+		for (int i = 0; i < tabsList.size(); i++) {
+			if (tabsList.get(i).findElement(By.cssSelector("span")).getText().equals(tabName)) {
+				tabsList.get(i).click();
+				break;
+			}
+		}
+	}
 
-    }
+	public String messageAfterOrderProcessCompleted() {
+		String contex = "";
+		for (WebElement appearAfterPurchaseProcess : messageAppearAfterPurchaseProcess) {
+			contex += (appearAfterPurchaseProcess.getText());
+		}
+		return contex;
+	}
+
+	public void closeTheTabPopUpAfterPurchase() {
+		WebElement xButton = DriverManager.getDriver().findElement(By.cssSelector("button[aria-label='Close']"));
+		xButton.click();
+	}
+
+	public List<String> getTabsName() {
+		List<String> tabsName = new ArrayList<>();
+		for (int i = 0; i < tabsList.size(); i++) {
+			tabsName.add(tabsList.get(i).findElement(By.cssSelector("span")).getText());
+		}
+
+		return tabsName;
+	}
+
+	public boolean isProductAddedToCartMessageDisplayed() {
+		return productAddedToCartMessage.isDisplayed();
+	}
+
+	public void scrollToTheItem(String nameOfProduct) {
+		BrowserUtils.scrollDownWithJavaScript(0, -2000);
+		int i;
+		for (i = 0; i < itemsList.size(); i++) {
+			if (BrowserUtils.getName(itemsList.get(i)).getText().equals(nameOfProduct)) {
+				BrowserUtils.scrollDownWithPageDown();
+				break;
+			}
+		}
+		System.out.println(" i  : " + i);
+		for (int m = 0; m < (i / 4) + 1; m++) {
+			if (m < 5) {
+				BrowserUtils.scrollDownWithJavaScript(0, 600);
+			}
+			else {
+				BrowserUtils.scrollDownWithJavaScript(0, 650);
+
+			}
+		}
+
+	}
+
 }
-
-
-
-
-
